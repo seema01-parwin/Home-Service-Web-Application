@@ -1,0 +1,94 @@
+/*old*/
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Add the background image to the body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://static.vecteezy.com/system/resources/previews/036/289/579/non_2x/smart-home-application-on-hand-holding-smartphone-screen-home-automation-controlling-house-devices-remote-home-control-technology-house-technology-system-with-wireless-centralized-control-vector.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+  /* Style for the content to be on top of the blurred background */
+  .register-container, .login-container {
+    position: relative;
+    z-index: 1; /* Ensure this content stays on top of the blur */
+    /* Other styling remains the same */
+  }
+    
+    .login-container {
+      color: white;
+      width: 350px;
+      margin: 100px auto;
+      padding: 30px;
+      padding-top: 1px;
+      background: linear-gradient(to right, #690b75, #bb60c7);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .login-container h1 {
+      font-size: 60px;
+      text-align: center;
+      margin-bottom: 1px;
+    }
+    
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+   
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      color: #000;
+    }
+    
+    .btn-login {
+      width: 100%;
+      padding: 10px;
+      background-color: #da96eb;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .btn-login:hover {
+      background-color: #841ea0;
+    }
+    
+    .register-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    
+    .register-link a {
+      color: rgb(167, 209, 255);
+      text-decoration: none;
+    }
+    
+    .register-link a:hover {
+      text-decoration: underline;
+    }

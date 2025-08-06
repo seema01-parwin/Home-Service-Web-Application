@@ -1,0 +1,76 @@
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    profile_picture VARCHAR(255) DEFAULT 'default.png', -- default profile image
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE admins (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE workers (
+    worker_id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    skill VARCHAR(50) NOT NULL,
+    profile_picture VARCHAR(255) DEFAULT NULL,
+    password VARCHAR(255) NOT NULL,
+    status ENUM('Pending', 'Approved', 'Rejected') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE services (
+    service_id INT AUTO_INCREMENT PRIMARY KEY,
+    service_name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10,2) NOT NULL,
+    service_rate VARCHAR(100),
+    service_duration VARCHAR(100),
+    service_rules TEXT,
+    icon_class VARCHAR(255)
+);
+
+INSERT INTO services (service_name, description, price, service_rate, service_duration, service_rules, icon_class)
+VALUES
+('Electrician', 'Handle wiring, lighting, and electrical repairs.', 50.00, 'Per Visit', '2 Hours', 'Ensure access to the main electrical panel.', 'fa-solid fa-bolt'),
+('Plumber', 'Fix leaks, install or repair plumbing systems.', 40.00, 'Per Visit', '1.5 Hours', 'Turn off water supply before service.', 'fa-solid fa-wrench'),
+('Carpenter', 'Woodwork repairs, fittings, and installations.', 45.00, 'Per Hour', '2 Hours', 'Ensure access to woodwork areas.', 'fa-solid fa-hammer'),
+('Painter', 'Interior and exterior painting services.', 35.00, 'Per Hour', '3 Hours', 'Cover furniture before painting.', 'fa-solid fa-paint-roller'),
+('Cleaner', 'Home and office cleaning services.', 30.00, 'Per Hour', '2 Hours', 'Remove fragile items beforehand.', 'fa-solid fa-broom'),
+('AC Technician', 'Repair and maintenance of air conditioners.', 60.00, 'Per Visit', '1 Hour', 'Turn off AC units before inspection.', 'fa-solid fa-snowflake'),
+('Pest Control Technician', 'Pest inspection and extermination services.', 70.00, 'Per Visit', '2 Hours', 'Evacuate children and pets during service.', 'fa-solid fa-bug'),
+('Mover', 'Packing and relocation services.', 80.00, 'Per Job', '4 Hours', 'Label all boxes clearly.', 'fa-solid fa-truck-moving'),
+('Gardener', 'Garden maintenance, planting, and trimming.', 25.00, 'Per Hour', '2 Hours', 'Clear garden access paths.', 'fa-solid fa-seedling'),
+('Security Technician', 'Installation and repair of CCTV and alarm systems.', 65.00, 'Per Visit', '2 Hours', 'Provide network and power access.', 'fa-solid fa-shield-halved');
+
+CREATE TABLE bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    worker_id INT,
+    service_id INT,
+    date DATE,
+    time TIME,
+    booking_status ENUM('Pending', 'Confirmed', 'Completed', 'Cancelled') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (worker_id) REFERENCES workers(worker_id),
+    FOREIGN KEY (service_id) REFERENCES services(service_id)
+);
+
+CREATE TABLE worker_proofs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    worker_id INT NOT NULL,
+    image_path VARCHAR(255) NOT NULL,
+    uploaded_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (worker_id) REFERENCES workers(worker_id) ON DELETE CASCADE
+);
+

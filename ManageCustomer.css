@@ -1,0 +1,198 @@
+/* GENERAL */
+body {
+    background-color: #7b208d;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+/* HEADER AND BUTTONS */
+h2 {
+    color: #8a389b;
+}
+
+.container {
+    background-color: #f5c6ff;
+    border-radius: 8px;
+    padding-bottom: 1xpx;
+    padding-top: 10px;
+    max-width: 95%;
+}
+
+.btn-primary {
+    background-color: #b242c1;
+    border-color: #b242c1;
+}
+
+.btn-primary:hover {
+    background-color: #9632a3;
+    border-color: #9632a3;
+}
+
+.btn-secondary {
+    background-color: #c36dd8;
+    border-color: #c36dd8;
+}
+
+.btn-secondary:hover {
+    background-color: #aa54c0;
+    border-color: #aa54c0;
+}
+
+.btn-info {
+    background-color: #cc6cdf;
+    border-color: #cc6cdf;
+}
+
+.btn-info:hover {
+    background-color: #b554c2;
+    border-color: #b554c2;
+}
+
+.btn-warning {
+    background-color: #ffbb33;
+    border-color: #ffbb33;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-danger {
+    background-color: #d63384;
+    border-color: #d63384;
+}
+
+.btn-danger:hover {
+    background-color: #b72c6f;
+    border-color: #a82666;
+}
+
+/* SEARCH BAR */
+.form-inline input[type="text"] {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* TABLE STYLES */
+.table-bordered th {
+    background-color: #f0e7fa;
+    color: #ac42c1;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.table-bordered td {
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+.table .status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+}
+
+.status-badge.active {
+    background-color: #d0bfff;
+    color: #a235b1;
+    font-weight: bold;
+}
+
+.status-badge.inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* PAGINATION */
+.pagination .page-link {
+    color: #b242c1;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ac42c1;
+    border-color: #a842c1;
+    color: white;
+}
+
+/* MODAL STYLES */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #b242c1;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-body {
+    background-color: #f8dbff;
+}
+
+.modal-body p {
+    font-size: 1rem;
+}
+
+.modal-body strong {
+    color: #b642c1;
+}
+
+/* PROFILE IMAGE IN MODAL */
+#customerImage {
+    border: 3px solid #d9b3ff;
+    box-shadow: 0 0 10px rgba(111, 66, 193, 0.3);
+}
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+        border: 1px solid #fad2ff;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: rgb(233, 147, 255);
+    }
+
+    .table td {
+        text-align: left;    
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-inline input,
+    .form-inline button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

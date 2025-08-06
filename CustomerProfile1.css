@@ -1,0 +1,176 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* General page setup */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbecff;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #630675;
+  color: white;
+  padding: 20px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 1.5em;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+ 
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav ul li a:hover {
+  color: #f3b2ff;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #f28dff, #f8d4ff);
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #652d74;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+/* Profile Section */
+.profile-pic {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic form {
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .profile-pic input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic button {
+    padding: 8px 20px;
+    background-color: #c85ee9;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-pic button:hover {
+    background-color: #8f00b3;
+  }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+  
+.profile-details p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: rgb(106, 48, 121);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background-color: #d400ff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8f00b3;
+}
+
+/* Success message */
+.success-message {
+    margin-top: 20px;
+    color: #28a739;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: #771b83;
+    color: white;
+    font-size: 14px;
+}

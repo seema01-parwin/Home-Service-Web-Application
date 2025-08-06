@@ -1,0 +1,93 @@
+/*old*/
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Add the background image to the body */
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #f2c7ff, #eb88ff);
+    color: #333;
+  }
+  
+  /* Style for the content to be on top of the blurred background */
+  .register-container, .login-container {
+    position: relative;
+    z-index: 1; /* Ensure this content stays on top of the blur */
+    /* Other styling remains the same */
+  }
+
+/* Register Page Styling */
+.register-container {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #690b75, #bb60c7);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding-top: 0.5px;
+  }
+  
+  .register-container h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 1px;
+    color: #fff;
+  }
+
+  .register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: white;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  
+  }
+  
+  .btn-register {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #dfa1f1;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-register:hover {
+    background-color: #6b107e;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+  }
+  
+  .login-link a {
+    color: #3ed662;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
